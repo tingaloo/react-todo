@@ -16,6 +16,7 @@
     "tailwindcss": "^1.4.6"
   },
   "scripts": {
+    "prebuild": "npm run build:tailwind",
     "build:tailwind": "postcss src/tailwind.css -o src/tailwind.generated.css",
     "watch:tailwind": "postcss -w src/tailwind.css -o src/tailwind.generated.css",
     "start": "run-p watch:tailwind start:react",
